@@ -21,15 +21,36 @@ body {
   flex-direction: column;
 }
 
+/* Top and bottom bars (full-width background) */
 .top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.6rem 1rem;
-  background-color: #16363b; /* deep teal */
+  width: 100%;
+  padding: 0.6rem 0;            /* no side padding here */
+  background-color: #16363b;    /* deep teal */
   color: #f7f0e6;
 }
 
+.bottom-bar {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid #decfb8;
+  background-color: #f3e6d4;
+}
+
+/* Inner container so contents align with main content width */
+.bar-inner {
+  max-width: 880px;     /* same as .main-content */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.bottom-inner {
+  padding: 0 1rem;
+}
+
+/* Top bar sections */
 .top-left,
 .top-center,
 .top-right {
@@ -308,15 +329,6 @@ button {
   display: none;
 }
 
-/* Bottom bar */
-.bottom-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  border-top: 1px solid #decfb8;
-  background-color: #f3e6d4;
-}
-
 /* Modal */
 .modal-overlay {
   position: fixed;
@@ -361,7 +373,7 @@ button {
 
 /* Responsive tweaks */
 @media (max-width: 720px) {
-  .top-bar {
+  .bar-inner {
     flex-wrap: wrap;
     row-gap: 0.3rem;
   }
