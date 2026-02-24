@@ -9,42 +9,43 @@
 <body>
   <div id="app">
     <!-- TOP BAR -->
-    <header class="top-bar">
-      <div class="top-left">
-        <div class="brand">
-          <!-- Replace src with your final Canva logo file when ready -->
-          <img src="nomad-logo.png" alt="Nomad logo" class="logo-img" />
-          <span class="brand-name">Nomad Tutor Apps</span>
-        </div>
-
-        <div class="screen-selector">
-          <label for="screenSelect" class="sr-only">Go to:</label>
-          <div class="select-wrapper">
-            <select id="screenSelect">
-              <option value="screen-landing">Landing & Preview</option>
-              <option value="screen-teach">Teach Step (Sample)</option>
-              <option value="screen-test">Test (Sample)</option>
-              <option value="screen-revision">Revision</option>
-              <!-- Parent Report is NOT in dropdown -->
-              <option value="screen-promo">Nomad Promo</option>
-            </select>
-            <span class="select-chevron">▾</span>
-          </div>
-        </div>
+     <header class="top-bar">
+  <div class="bar-inner">
+    <div class="top-left">
+      <!-- your existing brand + dropdown content stays here -->
+      <div class="brand">
+        <img src="nomad-logo.png" alt="Nomad logo" class="logo-img" />
+        <span class="brand-name">Nomad Tutor Apps</span>
       </div>
 
-      <div class="top-center">
-        <div class="chapter-title">
-          Class 8 Maths – Chapter 1: Rational Numbers
+      <div class="screen-selector">
+        <label for="screenSelect" class="sr-only">Go to:</label>
+        <div class="select-wrapper">
+          <select id="screenSelect">
+            <option value="screen-landing">Landing & Preview</option>
+            <option value="screen-teach">Teach Step (Sample)</option>
+            <option value="screen-test">Test (Sample)</option>
+            <option value="screen-revision">Revision</option>
+            <option value="screen-promo">Nomad Promo</option>
+          </select>
+          <span class="select-chevron">▾</span>
         </div>
       </div>
+    </div>
 
-      <div class="top-right">
-        <button id="parentReportBtn" class="btn-outline">
-          Parent Report
-        </button>
+    <div class="top-center">
+      <div class="chapter-title">
+        Class 8 Maths – Chapter 1: Rational Numbers
       </div>
-    </header>
+    </div>
+
+    <div class="top-right">
+      <button id="parentReportBtn" class="btn-outline">
+        Parent Report
+      </button>
+    </div>
+  </div>
+</header>
 
     <!-- MAIN CONTENT AREA -->
     <main class="main-content">
@@ -336,10 +337,11 @@
 
     <!-- BOTTOM NAV -->
     <footer class="bottom-bar">
-      <button id="prevBtn" class="btn-secondary">◀ Previous</button>
-      <button id="nextBtn" class="btn-primary">Next ▶</button>
-    </footer>
+  <div class="bar-inner bottom-inner">
+    <button id="prevBtn" class="btn-secondary">◀ Previous</button>
+    <button id="nextBtn" class="btn-primary">Next ▶</button>
   </div>
+</footer>
 
   <!-- SIMPLE MODAL FOR PAY CONFIRM / TERMS -->
   <div id="modalOverlay" class="modal-overlay hidden">
